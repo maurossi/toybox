@@ -2059,13 +2059,14 @@
 #undef FLAG_a
 #endif
 
-// stat c:f c:f
+// stat c:tf c:tf
 #undef OPTSTR_stat
-#define OPTSTR_stat "c:f"
+#define OPTSTR_stat "c:tf"
 #ifdef CLEANUP_stat
 #undef CLEANUP_stat
 #undef FOR_stat
 #undef FLAG_f
+#undef FLAG_t
 #undef FLAG_c
 #endif
 
@@ -4404,7 +4405,8 @@
 #define TT this.stat
 #endif
 #define FLAG_f (1<<0)
-#define FLAG_c (1<<1)
+#define FLAG_t (1<<1)
+#define FLAG_c (1<<2)
 #endif
 
 #ifdef FOR_strings
